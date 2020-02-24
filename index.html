@@ -1,1 +1,150 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Stefan.D">
+		<link rel="stylesheet"  href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<title>Snooker</title>
+	</head>
+	<body>
+		<header>
+			<div id="logo">
+				<img src="https://pbs.twimg.com/profile_images/1215209971518005249/Ng-zD7g1_400x400.jpg" alt="">
+			</div>
+			<ul>
+				<li>Home </li>
+				<li>About </li>
+				<li>Players </li>
+				<li>Tour </li>
+			</ul>
+		</header>
 
+		<section id="content">
+			<div class="cue-colors">
+				<h3>Cue colors in snooker :</h3><br>
+				<div id="red">
+				</div>
+				<div id="black">
+				</div>
+				<div id="pink">
+				</div>
+				<div id="blue">
+				</div>
+				<div id="yellow">
+				</div>
+				<div id="green">
+				</div>
+				<div id="brown">
+				</div>
+			</div>
+			<br>
+			<div class="snooker">
+				<h2><span id="first">S</span><span id="second">n</span><span id="third">o</span><span id="four">o</span><span id="five">k</span><span id="six">e</span><span id="seven">r</span> is type of art before everything.</h2>
+				<br>
+				<p>Snooker is a cue sport that originated among British Army officers stationed in India in the second half of the 19th century.</p>
+			</div>
+		</section>
+		<div class="wrap">
+			<div id="arrow-left" class="arrow"></div>
+			<div id="arrow-right" class="arrow"></div>
+			<div id="slider">
+				<div class="slide firstSlide fade">
+					<div class="slide-content">
+						<span>Steve Davis </span><br>
+						<span>Nick: Mister Black</span>
+					</div>
+				</div>
+				<div class="slide secondSlide fade">
+					<div class="slide-content">
+						<span>Alex Higgins</span><br>
+						<span>Nick: Hurricane</span>
+					</div>
+				</div>
+				<div class="slide thirdSlide fade">
+					<div class="slide-content">
+						<span>Stephen Hendry</span><br>
+						<span>Nick: The Maestro</span>
+					</div>
+				</div>
+				<div class="slide fourSlide fade">
+					<div class="slide-content">
+						<span>John Higgins </span><br>
+						<span>Nick: The Wizard of Wishaw</span>
+					</div>
+				</div>
+				<div class="slide fiveSlide fade">
+					<div class="slide-content">
+						<span>Ronnie O`Sullivan</span><br>
+						<span>Nick: The Rocket</span>
+					</div>
+				</div>
+				<div class="slide sixSlide fade">
+					<div class="slide-content">
+						<span>Neil Robertson</span><br>
+						<span>Nick: The Thunder from Down Under</span>
+					</div>
+				</div>
+				<div class="slide sevenSlide fade">
+					<div class="slide-content">
+						<span>Mark Selby</span><br>
+						<span>Nick: Jester from the Lester</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+
+			const sliderImages = document.querySelectorAll('.slide');
+			const arrowLeft = document.querySelector('#arrow-left');
+			const arrowRight = document.querySelector('#arrow-right');
+			let current = 0;
+            //reset slider
+			function resetSlide() {
+				for(let i = 0; i < sliderImages.length; i++) {
+					sliderImages[i].style.display='none';
+				}
+			}
+			
+			//init the slider
+			function startSlide() {
+				resetSlide();
+				sliderImages[0].style.display='block';
+			}
+
+			// show previous image
+			function slideLeft() {
+				resetSlide();
+				sliderImages[current - 1].style.display = 'block';
+				current--;
+			}
+			
+			// show next image 
+			
+			function slideRight() {
+				resetSlide();
+				sliderImages[current + 1].style.display = 'block';
+				current++;
+			}
+
+			// left arrow click event 
+			arrowLeft.addEventListener('click' , function() {
+				if(current === 0) {
+					current = sliderImages.length;
+				}
+				slideLeft();
+			});
+			
+			//right arrow click event 
+			arrowRight.addEventListener('click' , function() {
+				if(current === sliderImages.length - 1) {
+					current = -1;
+				}
+				slideRight();
+			});
+			startSlide();
+		</script>
+	</body>
+</html>
