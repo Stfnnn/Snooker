@@ -1,1 +1,408 @@
 
+* {
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+header {
+	display:flex;
+	flex-basis: auto;
+	height:11vh;
+	line-height: 10vh;
+	justify-content: space-around;
+	background:#000;
+	color:azure;
+	border-bottom:1px solid azure;
+}
+
+.header #logo  {
+	width:150px;
+	height:150px;
+	display:flex;
+}
+
+#logo img {
+	width:150px;
+	display:flex;
+	border-radius:5px;
+	height:10vh;
+}
+
+ul {
+	width:60%;
+	list-style: none;
+	padding:0;
+	margin:0;
+	display:flex;
+	text-align: center;
+	align-items: center;
+}
+
+li {
+	width:150px;
+	justify-content: space-between;
+	font-weight:bold;
+	font-family: "Lato";
+	font-size:16px;
+	letter-spacing:6px;
+	text-align: center;
+	border-radius:15px;
+	box-shadow:inset 10px 0 2px 2px red;
+}
+
+@media screen and (max-width:768px) {
+	header {
+		height:auto;
+		text-align: center;
+		align-items: center;
+		flex-direction:column-reverse;
+		flex-wrap:wrap;
+	}
+	
+	#logo img:hover {
+		width:250px;
+		height:250px;
+		margin:auto;
+		display:flex;
+	}
+
+	ul {
+		width:99%;
+		display:flex;
+		flex-direction: column;
+	}
+	li {
+		letter-spacing: 3px;
+		padding:3px;
+		box-shadow:inset 5px 0 7px 8px #43aacc;
+		opacity:0.8;
+		border-radius:5px;
+		margin-top:2px;
+		font-family: "Lato";
+	}
+
+	li:hover {
+		background:#ffffff;
+		text-transform: uppercase;
+		color:#000;
+		font-family: Arial;
+		box-shadow:inset 10px 3px 20px 10px #1ca3ca;
+		padding:5px;
+	}
+	.cue-colors {
+		-webkit-animation: linear infinite alternate;
+		-webkit-animation-name: example;
+		-webkit-animation-duration: 5s;
+	}
+}
+
+#content {
+	width:100%;
+	height:100vh;
+	display:flex;
+	flex-direction: column;
+	background-image:url("https://fsa.zobj.net/crop.php?r=ZQKWYYIP2Ke7R4Vj48CthIhdAz5a9ilLe6GBMrLcZt3A6LHbywX6mG0g_Ssa0VpWXbuNqmtTuyT7zbeW5-vok03M3uiHtSnf8hva9H9spbuK4K-RA8bZJ-TcibjdBk1Qfs8hlQ9MrKTq26Rk");
+	background-size:cover;
+	justify-content: center;
+	text-align: center;
+	background-attachment: scroll;
+}
+
+#content .cue-colors{
+	width:100%;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	height:11vh;
+	line-height:7vh;
+	padding:10px;
+	opacity:0.8;
+	color:transparent;
+	position: relative;
+	animation-name :example;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+}
+
+.cue-colors h3 {
+	width:auto;
+	text-transform: uppercase;
+	font-family: "Lato";
+	line-height: 9vh;
+	color:azure;
+}
+
+#red , #black , #pink , #blue , #yellow , #green , #brown {
+	display:flex;
+	justify-content: center;
+	width:60px;
+	height:60px;
+	border-radius:50%;
+}
+
+#red {
+	background:red;
+}
+
+#black {
+	background:#000;
+	border:2px solid white;
+}
+
+#pink {
+	background:pink;
+}
+
+#blue {
+	background:blue;
+}
+
+#yellow {
+	background:yellow;
+}
+
+#green {
+	background:green;
+}
+
+#brown {
+	background:brown;
+}
+
+@-webkit-keyframes example {
+	15%   {background-color:#1c3ac3; left:5px; top:0px;}
+	35%  {background-color:#3c3ac4; left:35px; top:0px;}
+	65% {background-color:#3c4af5; left:5px; top:0px;}
+}
+
+#content .snooker {
+	align-items: center;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	width:100%;
+	height:auto;
+	padding:5px;
+}
+
+.snooker h2 , p {
+	width:100%;
+	background:#000;
+	opacity:0.6;
+	text-align: center;
+	align-items: center;
+	color:azure;
+	font-family: "Lato";
+	font-weight:bold;
+	color:azure;
+	letter-spacing: 5px;
+	background-position: center;
+}
+
+span {
+	text-transform: uppercase;
+	font-family: "Lato";
+	font-weight:bold;
+	font-size:35px;
+}
+
+#first {
+	color:red;
+}
+
+#second {
+	background:white;
+	color:black;
+	font-size:37px;
+	border-radius:50%;
+	text-indent: 2px;
+}
+
+#third {
+	color:pink;
+}
+
+#four {
+	color:blue;
+}
+
+#five {
+	color:yellow;
+}
+
+#six {
+	color:green;
+}
+
+#seven {
+	color:brown;
+}
+
+@media screen and (max-width:1024px) {
+	header {
+		width:100%;
+		display:flex;
+		align-items: center;
+		text-align: center;
+		flex-direction:row;
+		margin-bottom:2px;
+	}
+	
+	header #logo img {
+		margin-bottom:3px;
+	}
+
+	li {
+		display:flex;
+		justify-content: space-around;
+		width:100%;
+		font-size:17px;
+		flex-direction: column;
+		height:9vh;
+		line-height: auto;
+		text-align: center;
+		margin-bottom:3px;
+	}
+
+	#content {
+		height:auto;
+		display:flex;
+		flex-direction: column-reverse;
+	}
+
+	#content .cue-colors {
+		width:100%;
+		height:auto;
+		flex-wrap:wrap;
+	}
+
+	#content .snooker {
+		width:auto;
+		letter-spacing: 2px;
+		border:none;
+	}
+}
+
+ #slider , .wrap , .slide-content {
+	margin:auto;
+	width:100%;
+	height:100vh;
+}
+
+#slider {
+	width:90%;
+	height:80%;
+	background-size:cover;
+}
+
+.wrap {
+	position:relative;
+	overflow: hidden;
+	border:2px double black;
+	box-shadow:inset 10px 15px 20px 15px #13cac3;
+	border-radius:10px;
+	padding:60px;
+	background:#000;
+	margin-top:2px;
+}
+
+.slide{
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+
+.firstSlide {
+	background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Steve_Davis_at_German_Masters_Snooker_Final_%28DerHexer%29_2012-02-05_20.jpg/800px-Steve_Davis_at_German_Masters_Snooker_Final_%28DerHexer%29_2012-02-05_20.jpg");
+	height:520px;
+	border-radius:10px;
+}
+
+.secondSlide {
+	background-image: url("https://www.thesun.co.uk/wp-content/uploads/2016/05/2891822.main_image.jpg?strip=all");
+	height:530px;
+	border-radius:10px;
+}
+
+.thirdSlide {
+	background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/05/02/20/68-hendrylackoftalent2-gt.jpg");
+	height:530px;
+	border-radius:10px;
+}
+
+.fourSlide {
+	background-image: url("https://i.pinimg.com/originals/80/a7/d9/80a7d90fd057717243aa3a3f9d3e5d63.jpg");
+	height:530px;
+	border-radius:10px;
+}
+
+.fiveSlide {
+	background-image: url("https://i.dailymail.co.uk/1s/2019/04/21/23/12551306-0-image-a-89_1555884795932.jpg");
+	height:530px;
+	border-radius:10px;
+}
+
+.sixSlide {
+	background-image: url("https://i.eurosport.com/2019/04/19/2569323-53285177-1600-900.jpg");
+	height:530px;
+	border-radius:10px;
+}
+
+.sevenSlide {
+	background-image: url("https://wst.tv/wp-content/uploads/2019/01/MG_0921.jpg");
+	height:530px;
+	border-radius:10px;
+}
+
+.slide-content {
+	display:flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	height:530px;
+	border-radius:10px;
+}
+
+.slide-content span {
+	font-size:2rem;
+	letter-spacing: 3px;
+	font-family: "Lato";
+	display:flex;
+	flex-direction: row;
+	width:auto;
+	height:auto;
+	background:#000;
+	opacity:0.4;
+	color:azure;
+	padding: 5px;
+	border:2px solid azure;
+	border-radius:10px;
+}
+
+.arrow {
+	cursor:pointer;
+	position: absolute;
+	top:50%;
+	width:0;
+	height:0;
+	border-style: solid;
+}
+
+#arrow-left {
+	border-width:20px 30px 20px 0;
+	border-color:transparent #fff transparent transparent;
+	left:0;
+	margin-left:40px;
+	opacity:0.7;
+}
+
+#arrow-right {
+	border-width:20px 0 20px 30px;
+	border-color:transparent transparent transparent #fff;
+	right:0;
+	margin-right:40px;
+	opacity:0.7;
+}
